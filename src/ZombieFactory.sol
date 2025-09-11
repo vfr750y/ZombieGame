@@ -1,5 +1,5 @@
 // SPDX-License-Identifier:MIT
-pragma solidity >=0.5.9 <0.6.0;
+pragma solidity >=0.5.0 <0.6.0;
 
 contract ZombieFactory {
     uint256 dnaDigits = 16;
@@ -9,4 +9,8 @@ contract ZombieFactory {
         string name;
         uint256 dna;
     }
+
+    Zombie[] public zombies;
+
+    // start here
 }
