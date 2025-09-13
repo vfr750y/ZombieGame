@@ -15,7 +15,8 @@ contract ZombieFactory {
     Zombie[] public zombies;
 
     function _createZombie(string memory _name, uint256 _dna) private {
-        uint256 id = zombies.push(Zombie(_name, _dna)) - 1;
+        uint256 id = zombies.push(Zombie(_name, _dna)) - 1; // zombies.push returns the NEW length of the array (after the push)
+        // note that in newer versions of solidity .push does not return the new length, instead use array.length.
         emit NewZombie(id, _name, _dna);
     }
 
