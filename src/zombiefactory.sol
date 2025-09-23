@@ -14,7 +14,7 @@ contract ZombieFactory is Ownable {
         string name;
         uint256 dna;
         uint32 level;
-        uint32 readytime;
+        uint32 readyTime;
     }
 
     Zombie[] public zombies;
